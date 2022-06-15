@@ -9,6 +9,9 @@ const Header = (props) => {
         <Link to='/about'>
           <div>ABOUT</div>
         </Link>
+        <Link to='/products'>
+          <div>PRODUCTS</div>
+        </Link>
       </nav>
   );
 };
