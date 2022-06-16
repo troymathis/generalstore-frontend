@@ -8,7 +8,7 @@ function Product(props) {
   //create function to make api call
   const getProductData = async () => {
     // make api call and get response
-    const response = await fetch("http://localhost:4000/products");
+    const response = await fetch("https://generalstore-be.herokuapp.com/products");
     // turn response into javascript object
     const data = await response.json();
     // set the state to the data
@@ -21,10 +21,10 @@ function Product(props) {
   const loaded = () => {
     return products.map((product, index) => {
       return (
-        <div key={index}>
-          <h2>{product.name}</h2>
+        <div key={index} className='prdct'>
+          <span id="name"><h2>{product.name}</h2></span>
           <img src={product.image} alt="" />
-          <h2> {product.price}</h2>
+          <span id="price"><h2>Price: {product.price}</h2></span>
         </div>
       );
     });

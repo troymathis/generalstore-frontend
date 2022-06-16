@@ -13,9 +13,11 @@ const Main = () => {
             <Route exact path='/'>
                 <Home />
             </Route>
+            <div className='products'>
             <Route path='/products'>
                 <Index />
             </Route>
+            </div>
             <Route path='/show'>
                 <Show />
             </Route>

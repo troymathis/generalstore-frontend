@@ -1,6 +1,6 @@
 import Nav from './components/Nav';
 import Main from './components/Main';
-import './App.css';
+import "./styles.scss";
 
 function App() {
   return (
