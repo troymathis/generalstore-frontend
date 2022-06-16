@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+$maincolor: #F0EAD6;
+$contrastcolor: #300f4d;
+
+@mixin source {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+* {
+    @include source;
+    font-family: 'Ultra', serif;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+.nav {
+    border-radius: 5px;
+}
+
+.products {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px solid black;
+}
+
+.prdct {
+    
+}
