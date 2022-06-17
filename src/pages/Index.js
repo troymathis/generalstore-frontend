@@ -23,7 +23,7 @@ function Product(props) {
       return (
         <div key={index} className='prdct'>
           <span id="name"><h2>{product.name}</h2></span>
-          <img src={product.image} alt="" />
+          <img src={product.image}  alt="" />
           <span id="price"><h2>Price: {product.price}</h2></span>
         </div>
       );

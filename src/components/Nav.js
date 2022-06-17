@@ -10,6 +10,7 @@ const Header = (props) => {
     width:"90%",
     margin:"auto",
 };
+
   return (
       <nav className='nav' style={navStyle}>
         <Link to='/'>

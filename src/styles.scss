@@ -13,6 +13,7 @@ $contrastcolor: #300f4d;
     font-family: 'Ultra', serif;
 }
 
+
 h1 {
     display: flex;
     justify-content: center;
@@ -31,12 +32,25 @@ a:hover {
 }
 
 .products {
-    margin-top: 30px;
+    margin: 30px auto;
     display: flex;
-    justify-content: space-evenly;
-    border: 5px solid black;
+    width: 1300px;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
 
 .prdct {
-    
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction:column;
+    flex-wrap: wrap
+}
+
+.prdct > img {
+    max-width: 100px;
 }
