@@ -28,6 +28,21 @@ a:hover {
 
 .nav {
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 1.5rem;
+            cursor: pointer;
+        }
+        .greeting-list-item {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 .products {

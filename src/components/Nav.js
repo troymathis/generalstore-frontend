@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
+import { login, logout } from '../services/firebase';
 
 const Header = (props) => {
+  // inline style tage for user nav info
+  const photoStyles = {
+    borderRadius: '50%',
+    height: '2.5rem',
+    margin: '0 1rem'
+  }
   //inline style for the nav tag
   const navStyle = {
     display:"flex",
@@ -21,6 +28,25 @@ const Header = (props) => {
         <Link to='/products'>
           <div>PRODUCTS</div>
         </Link>
+        <ul>
+          {
+            props.user 
+            ? 
+              (
+                <>
+                  <li className='greeting-list-item'>Welcome, {props.user.displayName} 
+                    <img 
+                      style={photoStyles}
+                      src={props.user.photoURL} 
+                      alt={props.user.displayName}
+                    />
+                  </li>
+                  <li onClick={logout}>Logout</li>
+                </>
+              )
+            : <li onClick={login}>Login</li> 
+          }
+        </ul>
       </nav>
   );
 };
