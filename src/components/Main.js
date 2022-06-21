@@ -24,6 +24,9 @@ const Main = () => {
             <Route path='/about'>
                 <About />
             </Route>
+            <Route path='/account'>
+                <Account />
+            </Route>
         </main>
     )
 }
