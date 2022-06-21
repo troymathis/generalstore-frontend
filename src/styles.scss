@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
 $maincolor: #F0EAD6;
@@ -16,6 +17,15 @@ $contrastcolor: #300f4d;
 h1 {
     display: flex;
     justify-content: center;
+    font-size: xxx-large;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+li:hover {
+    opacity: 50%;
 }
 
 a {
@@ -27,31 +37,36 @@ a:hover {
 }
 
 .nav {
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        li {
-            margin-right: 1.5rem;
-            cursor: pointer;
-        }
-        .greeting-list-item {
-            display: flex;
-            align-items: center;
-        }
-    }
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border:3px solid black;
+    padding:8px;
+    width: 90%;
+    margin:auto;
+    border-radius: 30px;
 }
 
 .products {
-    margin-top: 30px;
+    margin: 30px auto;
     display: flex;
-    justify-content: space-evenly;
-    border: 5px solid black;
+    width: 1300px;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
 
 .prdct {
-    
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction:column;
+    flex-wrap: wrap
+}
+
+.prdct > img {
+    max-width: 100px;
 }

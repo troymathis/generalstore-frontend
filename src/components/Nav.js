@@ -18,7 +18,7 @@ const Header = (props) => {
     margin:"auto",
 };
   return (
-      <nav className='nav' style={navStyle}>
+      <nav className='nav'>
         <Link to='/'>
           <div>HOME</div>
         </Link>
