@@ -9,7 +9,6 @@ function Product(props) {
 
   //create function to make api call
   const getProductData = async () => {
-    //const token = await props.user.getIdToken();
     // make api call and get response
     const response = await fetch(URL);
     // turn response into javascript object
