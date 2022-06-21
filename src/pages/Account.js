@@ -4,8 +4,6 @@ const Account = (props) => {
         console.log(token)
     }
 
-    getFirebaseToken();
-
     const generateAcctDisplay = () => {
         return  <div className="account-info">
                     <h1>Account</h1>
