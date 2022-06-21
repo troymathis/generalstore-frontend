@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap%27');
 
 $maincolor: #F0EAD6;
 $contrastcolor: #300f4d;
@@ -11,6 +11,11 @@ $contrastcolor: #300f4d;
 * {
     @include source;
     font-family: 'Ultra', serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -33,10 +38,23 @@ a:hover {
 .products {
     margin-top: 30px;
     display: flex;
-    justify-content: space-evenly;
-    border: 5px solid black;
+    width: 1300px;
+    flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 .prdct {
-    
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction:column;
+    flex-wrap: wrap
+}
+
+.prdct > img {
+    max-width: 100px;
 }

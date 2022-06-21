@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-  //inline style for the nav tag
   const navStyle = {
     display:"flex",
     justifyContent:"space-around",
