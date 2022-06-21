@@ -7,6 +7,8 @@ function Product(props) {
   const URL = "http://localhost:4000/products";
 
   const [products, setProduct] = useState(null);
+  const URL = "https://generalstore-be.herokuapp.com/products"
+  
 
   const [newForm,setNewForm] = useState({
     name:"",

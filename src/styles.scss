@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap%27');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
 $maincolor: #F0EAD6;
 $contrastcolor: #300f4d;
@@ -21,6 +23,15 @@ main {
 h1 {
     display: flex;
     justify-content: center;
+    font-size: xxx-large;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+li:hover {
+    opacity: 50%;
 }
 
 a {
@@ -32,15 +43,23 @@ a:hover {
 }
 
 .nav {
-    border-radius: 5px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border:3px solid black;
+    padding:8px;
+    width: 90%;
+    margin:auto;
+    border-radius: 30px;
 }
 
 .products {
-    margin-top: 30px;
+    margin: 30px auto;
     display: flex;
     width: 1300px;
     flex-wrap: wrap;
     justify-content:space-around;
+
 }
 
 .prdct {
