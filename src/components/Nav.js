@@ -21,8 +21,7 @@ const Header = (props) => {
                 <>
                   <li className='greeting-list-item'>Welcome, {props.user.displayName} 
                     <Link to='/account'>
-                      <img 
-                        style={photoStyles}
+                      <img
                         src={props.user.photoURL} 
                         alt={props.user.displayName}
                       />

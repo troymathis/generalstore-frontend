@@ -11,7 +11,7 @@ import Home from "../pages/Home";
 const Main = () => {
   const [product, setProduct] = useState(null);
 
-  const URL = "http://localhost:4000/products/";
+  const URL = "https://generalstore-be.herokuapp.com/products";
 
   const getProduct = async () => {
     const response = await fetch(URL);
