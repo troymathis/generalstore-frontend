@@ -6,6 +6,7 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import About from '../pages/About';
 import Home from '../pages/Home';
+import Account from '../pages/Account';
 
 const Main = () => {
     return (
