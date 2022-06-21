@@ -2,21 +2,6 @@ import { Link } from 'react-router-dom';
 import { login, logout } from '../services/firebase';
 
 const Header = (props) => {
-  // inline style tage for user nav info
-  const photoStyles = {
-    borderRadius: '50%',
-    height: '2.5rem',
-    margin: '0 1rem'
-  }
-  //inline style for the nav tag
-  const navStyle = {
-    display:"flex",
-    justifyContent:"space-around",
-    border:"3px solid black",
-    padding:"8px",
-    width:"90%",
-    margin:"auto",
-};
   return (
       <nav className='nav'>
         <Link to='/'>

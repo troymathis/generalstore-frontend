@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
 $maincolor: #F0EAD6;
@@ -12,6 +13,11 @@ $contrastcolor: #300f4d;
 * {
     @include source;
     font-family: 'Ultra', serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -52,7 +58,8 @@ a:hover {
     display: flex;
     width: 1300px;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-around;
+
 }
 
 .prdct {
