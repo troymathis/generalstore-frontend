@@ -35,11 +35,14 @@ const Header = (props) => {
               (
                 <>
                   <li className='greeting-list-item'>Welcome, {props.user.displayName} 
-                    <img 
-                      style={photoStyles}
-                      src={props.user.photoURL} 
-                      alt={props.user.displayName}
-                    />
+                    <Link to='/account'>
+                      <img 
+                        style={photoStyles}
+                        src={props.user.photoURL} 
+                        alt={props.user.displayName}
+                      />
+                    </Link>
+
                   </li>
                   <li onClick={logout}>Logout</li>
                 </>

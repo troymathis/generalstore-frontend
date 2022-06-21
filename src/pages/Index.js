@@ -4,11 +4,13 @@ function Product(props) {
   // create state to hold product data
 
   const [products, setProduct] = useState(null);
+  const URL = "https://generalstore-be.herokuapp.com/products"
+  
 
   //create function to make api call
   const getProductData = async () => {
     // make api call and get response
-    const response = await fetch("https://generalstore-be.herokuapp.com/products");
+    const response = await fetch(URL);
     // turn response into javascript object
     const data = await response.json();
     // set the state to the data

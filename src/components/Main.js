@@ -6,8 +6,9 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import About from '../pages/About';
 import Home from '../pages/Home';
+import Account from '../pages/Account';
 
-const Main = () => {
+const Main = (props) => {
     return (
         <main>
             <Route exact path='/'>
@@ -23,6 +24,9 @@ const Main = () => {
             </Route>
             <Route path='/about'>
                 <About />
+            </Route>
+            <Route path='/account'>
+                <Account user={props.user} />
             </Route>
         </main>
     )
