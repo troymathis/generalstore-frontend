@@ -13,6 +13,13 @@ export default function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+      .then((userCredential) => {
+        console.log(userCredential.user)
+      })
+      .catch((error) => {
+        console.log(error.code, error.message);
+      })
+
     setUser({
         email: "",
         password: "",
@@ -48,11 +55,6 @@ export default function Register() {
         type="text" 
         name="lastName" 
         placeholder='Last Name'
-        onChange={handleChange}/>
-      <input 
-        type="url" 
-        name="image" 
-        placeholder='profile image url'
         onChange={handleChange}/>
       <input type="submit" value="submit"/>
     </form>
