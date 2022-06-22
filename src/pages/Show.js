@@ -23,11 +23,13 @@ function Show(props) {
     props.deleteProduct(product._id);
     props.history.push("/");
   }
+
  useEffect(() => {
     if (products){
         setEditForm(products)
     }
  },[products])
+ 
   return (
     <div className="product">
       <h1>{products?.name}</h1>

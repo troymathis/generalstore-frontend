@@ -7,6 +7,8 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import About from "../pages/About";
 import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const Main = () => {
   const [product, setProduct] = useState(null);
@@ -17,19 +19,6 @@ const Main = () => {
     const response = await fetch(URL);
     const data = await response.json();
     setProduct(data);
-  };
-
-  const createProduct = async (products) => {
-    // make post request to create people
-    await fetch(URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json",
-      },
-      body: JSON.stringify(product),
-    });
-    // update list of people
-    getProduct();
   };
 
   const updateProduct = async (product, id) => {
@@ -78,6 +67,12 @@ const Main = () => {
       />
       <Route path="/about">
         <About />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/register">
+        <Register />
       </Route>
     </main>
   );
