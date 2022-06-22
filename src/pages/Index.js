@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 function Product(props) {
   // create state to hold product data
-
   const [products, setProduct] = useState(null);
   const URL = "https://generalstore-be.herokuapp.com/products"
   
