@@ -16,6 +16,7 @@ export default function Login() {
         email: "",
         password: "",
     });
+
   }
 
   const handleChange = (event) => {
@@ -24,7 +25,6 @@ export default function Login() {
 
   return (
     <div>
-
     <form onSubmit={handleSubmit}>
       <input 
         type="text" 
