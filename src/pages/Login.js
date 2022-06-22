@@ -11,17 +11,24 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-    setUser({
-        email: "",
-        password: "",
-    });
-
+    firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+      .then((userCredential) => {
+        var loginUser = userCredential.user
+        setUser({
+          email: "",
+          password: "",
+        });
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+      })
   }
 
   const handleChange = (event) => {
     setUser({...user,[event.target.name]:event.target.value});
-};
+  };
 
   return (
     <div>
@@ -39,7 +46,7 @@ export default function Login() {
       
       <input type="submit" value="submit"/>
     </form>
-    Not a User? Register <Link to='/register'>here</Link>
+      <Link to='/register'>Not a User? Register here</Link>
     </div>
   )
 }

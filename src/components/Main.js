@@ -8,6 +8,7 @@ import Show from "../pages/Show";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const Main = () => {
   const [product, setProduct] = useState(null);
@@ -69,6 +70,9 @@ const Main = () => {
       </Route>
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/register">
+        <Register />
       </Route>
     </main>
   );
