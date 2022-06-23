@@ -9,6 +9,10 @@ export default function Login() {
     password: "",
   });
 
+  const [errorFB, setErrorFB] = useState(null);
+
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(user.email, user.password)
@@ -22,7 +26,11 @@ export default function Login() {
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorCode, errorMessage)
+        setErrorFB(errorMessage);
+        setUser({
+          email: "",
+          password: "",
+        });
       })
   }
 
@@ -37,16 +45,21 @@ export default function Login() {
         type="text" 
         name="email" 
         placeholder='example@email.com'
+        value={user.email}
         onChange={handleChange}/>
       <input 
         type="password" 
         name="password" 
         placeholder='password'
+        value={user.password}
         onChange={handleChange}/>
       
       <input type="submit" value="submit"/>
     </form>
       <Link to='/register'>Not a User? Register here</Link>
+      <div className='error'>
+        {errorFB}
+      </div>
     </div>
   )
 }

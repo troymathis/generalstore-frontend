@@ -14,6 +14,7 @@ function Show(props) {
   }
 
   const handleSubmit = event => {
+    console.log(editForm);
     event.preventDefault();
     props.updateProduct(editForm,products._id);
     props.history.push("/products");
@@ -60,6 +61,20 @@ function Show(props) {
           value={editForm?.price}
           name="price"
           placeholder="title"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          value={editForm?.description}
+          name="description"
+          placeholder="description"
+          onChange={handleChange}
+        />
+        <input 
+          type="text"
+          value={editForm?.tag}
+          name="tag"
+          placeholder="tag"
           onChange={handleChange}
         />
         <input type="submit" value="Update Product" />

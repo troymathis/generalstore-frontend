@@ -13,6 +13,8 @@ function Product(props) {
     name:"",
     image:"",
     price:"",
+    description:"",
+    tag:"",
 });
 
 const handleChange= (event) => {
@@ -27,6 +29,8 @@ const handleSubmit = (event) => {
         name:"",
         image:"",
         price:"",
+        description:"",
+        tag:"",
     });
 };
 
@@ -53,7 +57,7 @@ const handleSubmit = (event) => {
   }
 
   // make initial call for the data inside a useEffect, so it only happens once one component load
-  useEffect(() => {getProductData()}, []);
+  useEffect(() => {getProductData()}, [products]);
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
@@ -93,6 +97,20 @@ const handleSubmit = (event) => {
                   value={newForm.price}
                   name="price"
                   placeholder="price"
+                  onChange={handleChange}
+                  />
+            <input 
+                  type="text"
+                  value={newForm.description}
+                  name="description"
+                  placeholder="description"
+                  onChange={handleChange}
+                  />
+            <input 
+                  type="text"
+                  value={newForm.tag}
+                  name="tag"
+                  placeholder="tag"
                   onChange={handleChange}
                   />
             <input type="submit" value="Create Product" />
