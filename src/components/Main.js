@@ -49,7 +49,7 @@ const Main = () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <div className="products">
+      <div>
         <Route exact path="/products">
           <Index />
         </Route>

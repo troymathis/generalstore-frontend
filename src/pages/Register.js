@@ -59,7 +59,7 @@ const Register = () => {
         placeholder='example@email.com'
         onChange={handleChange}/>
       <input 
-        type="text" 
+        type="password" 
         name="password" 
         placeholder='password'
         onChange={handleChange}/>

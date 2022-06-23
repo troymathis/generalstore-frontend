@@ -36,7 +36,7 @@ function Show(props) {
     <div className="product">
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
-      <h2>{products?.price}</h2>
+      <h2>${products?.price}</h2>
       <button id="delete" onClick={removeProduct}>
         DELETE
       </button>
