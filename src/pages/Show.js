@@ -20,8 +20,10 @@ function Show(props) {
   }
 
   const removeProduct = () => {
+
     props.deleteProduct(products._id);
     props.history.push("/products");
+
   }
 
  useEffect(() => {
