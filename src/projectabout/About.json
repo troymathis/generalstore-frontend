@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "MATTHEW PERO",
+        "email": "mattpero22@gmail.com",
+        "headshot": "http://www.imgur.com/pictureofproject.png",
+        "bio": "Bob Smith graduated from General Assembly in 2017. Afterwords, he went to work for XYZ Technologies where he maintained a full stack application using Meteor and Ember. He also recently started started learning Prolog, cause why not waste time."
+      },
+      {
+        "name": "MAIKA LANGI",
+        "email": "Bob@BobSmith.dev",
+        "headshot": "http://www.imgur.com/pictureofproject.png",
+        "bio": "Bob Smith graduated from General Assembly in 2017. Afterwords, he went to work for XYZ Technologies where he maintained a full stack application using Meteor and Ember. He also recently started started learning Prolog, cause why not waste time."
+      },
+      {
+        "name": "TROY MATHIS",
+        "email": "Bob@BobSmith.dev",
+        "headshot": "http://www.imgur.com/pictureofproject.png",
+        "bio": "Bob Smith graduated from General Assembly in 2017. Afterwords, he went to work for XYZ Technologies where he maintained a full stack application using Meteor and Ember. He also recently started started learning Prolog, cause why not waste time."
+      },
+      {
+        "name": "JQUAN COLLINS",
+        "email": "Bob@BobSmith.dev",
+        "headshot": "http://www.imgur.com/pictureofproject.png",
+        "bio": "Bob Smith graduated from General Assembly in 2017. Afterwords, he went to work for XYZ Technologies where he maintained a full stack application using Meteor and Ember. He also recently started started learning Prolog, cause why not waste time."
+      }
+]
