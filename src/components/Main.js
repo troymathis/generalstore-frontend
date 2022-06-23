@@ -45,7 +45,7 @@ const Main = () => {
 
   useEffect(() => {getProduct()}, []);
   return (
-    <main>
+    <main className="main-cont">
       <Route exact path="/">
         <Home />
       </Route>

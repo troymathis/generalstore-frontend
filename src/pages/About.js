@@ -28,7 +28,7 @@ function About(props) {
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
-  return about ? loaded() : <h1>Loading...</h1>;
+  return about ? loaded() : <h1 className="about-loading">Loading...</h1>;
 }
 
 export default About;

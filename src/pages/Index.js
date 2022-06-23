@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function Product(props) {
   // create state to hold product data
   const [products, setProduct] = useState(null);
-  const URL = "https://generalstore-be.herokuapp.com/products"
+  const URL = "http://localhost:4000/products"
   
 
   const [newForm,setNewForm] = useState({
@@ -60,10 +60,10 @@ const handleSubmit = (event) => {
         return (
           <div key={index} className='prdct'>
             <Link to={`/products/${product._id}`}>
-            <h1>{product.name}</h1>
+            <span className="prod-name">{product.name}</span>
           </Link>
-            <span id="name"><h2>{product.name}</h2></span>
-            <img src={product.image} alt="" />
+            {/* <span id="name"><h2>{product.name}</h2></span> */}
+            <img className="prod-img" src={product.image} alt="" />
             <span id="price"><h2>Price: {product.price}</h2></span>
           </div>
         )
@@ -71,8 +71,8 @@ const handleSubmit = (event) => {
     )
   )};
   return (
-    <section>
-          <form onSubmit={handleSubmit}>
+    <section className="index-sec">
+          <form className="index-form" onSubmit={handleSubmit}>
               <input
                   type="text"
                   value={newForm.name}
@@ -96,7 +96,9 @@ const handleSubmit = (event) => {
                   />
             <input type="submit" value="Create Product" />
           </form>
+          <div className="index-container">
           {products ? loaded() : <h1>Loading...</h1>}
+          </div>
       </section>
 
   )

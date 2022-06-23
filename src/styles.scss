@@ -16,8 +16,12 @@ $contrastcolor: #300f4d;
 }
 
 main {
-    display: flex;
+    // display: flex;
     justify-content: center;
+}
+
+.about-loading {
+    text-align: center;
 }
 
 h1 {
@@ -59,7 +63,10 @@ a:hover {
     width: 1300px;
     flex-wrap: wrap;
     justify-content:space-around;
+}
 
+.prod-name {
+    font-size: xx-large;
 }
 
 .prdct {
@@ -67,13 +74,36 @@ a:hover {
     border-radius: 5px;
     padding: 5px;
     max-width: 300px;
+    padding: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content:space-between;
     flex-direction:column;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    .prod-img {
+        border-radius: 5%;
+        border: 2px solid black;
+        width: 100%;
+        box-shadow: 0px 5px 10px 0.05px;
+    }
 }
 
-.prdct > img {
-    max-width: 100px;
+// .prdct > img {
+//     max-width: 500px;
+// }
+
+.index-sec {
+    display: flexbox;
+    justify-content: center;
+    width: 90%;
+
+    .index-form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .index-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
