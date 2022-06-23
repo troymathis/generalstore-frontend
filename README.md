@@ -1,6 +1,6 @@
-# GROUP PROJECT BY MAIKA LANGI, TROY MATHIS, MATT PERO, AND JQUAN COLLINS
+# GENERAL STORE
 
-## GENERAL STORE
+## GROUP PROJECT BY MAIKA LANGI, TROY MATHIS, MATT PERO, AND JQUAN COLLINS
 
    A web application to help customers find items they can implement to their lifestyle.
 
