@@ -20,7 +20,8 @@ function Show(props) {
   }
 
   const removeProduct = () => {
-    props.deleteProduct(product._id);
+    console.log(products._id)
+    props.deleteProduct(products._id);
     props.history.push("/");
   }
 
