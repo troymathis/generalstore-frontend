@@ -22,7 +22,7 @@ const Main = () => {
   };
 
   const updateProduct = async (product, id) => {
-    // make put request to create people
+    // make put request to create product
     await fetch(URL + id, {
       method: "PUT",
       headers: {
@@ -30,7 +30,7 @@ const Main = () => {
       },
       body: JSON.stringify(product),
     });
-    // update list of people
+    // update list of product
     getProduct();
   };
 
@@ -39,7 +39,7 @@ const Main = () => {
     await fetch(URL + id, {
       method: "DELETE",
     });
-    // update list of people
+    // update list of product
     getProduct();
   };
 

@@ -15,14 +15,15 @@ function Show(props) {
 
   const handleSubmit = event => {
     event.preventDefault();
-    props.updateProduct(editForm);
-    props.history.push("/");
+    props.updateProduct(editForm,products._id);
+    props.history.push("/products");
   }
 
   const removeProduct = () => {
-    console.log(products._id)
+
     props.deleteProduct(products._id);
-    props.history.push("/");
+    props.history.push("/products");
+
   }
 
  useEffect(() => {
