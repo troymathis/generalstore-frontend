@@ -13,7 +13,7 @@ import Register from "../pages/Register";
 const Main = () => {
   const [product, setProduct] = useState(null);
 
-  const URL = "https://project3-be.herokuapp.com/products";
+  const URL = "https://project3-be.herokuapp.com/products/";
 
   const getProduct = async () => {
     const response = await fetch(URL);
