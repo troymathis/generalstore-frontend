@@ -15,13 +15,15 @@ function Show(props) {
 
   const handleSubmit = event => {
     event.preventDefault();
-    props.updateProduct(editForm);
-    props.history.push("/");
+    props.updateProduct(editForm,products._id);
+    props.history.push("/products");
   }
 
   const removeProduct = () => {
-    props.deleteProduct(product._id);
-    props.history.push("/");
+
+    props.deleteProduct(products._id);
+    props.history.push("/products");
+
   }
 
  useEffect(() => {
@@ -34,7 +36,7 @@ function Show(props) {
     <div className="product">
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
-      <h2>{products?.price}</h2>
+      <h2>${products?.price}</h2>
       <button id="delete" onClick={removeProduct}>
         DELETE
       </button>

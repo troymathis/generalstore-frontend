@@ -13,7 +13,7 @@ import Register from "../pages/Register";
 const Main = () => {
   const [product, setProduct] = useState(null);
 
-  const URL = "https://project3-be.herokuapp.com/products";
+  const URL = "https://project3-be.herokuapp.com/products/";
 
   const getProduct = async () => {
     const response = await fetch(URL);
@@ -22,7 +22,7 @@ const Main = () => {
   };
 
   const updateProduct = async (product, id) => {
-    // make put request to create people
+    // make put request to create product
     await fetch(URL + id, {
       method: "PUT",
       headers: {
@@ -30,7 +30,7 @@ const Main = () => {
       },
       body: JSON.stringify(product),
     });
-    // update list of people
+    // update list of product
     getProduct();
   };
 
@@ -39,7 +39,7 @@ const Main = () => {
     await fetch(URL + id, {
       method: "DELETE",
     });
-    // update list of people
+    // update list of product
     getProduct();
   };
 
@@ -49,7 +49,7 @@ const Main = () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <div className="products">
+      <div>
         <Route exact path="/products">
           <Index />
         </Route>
