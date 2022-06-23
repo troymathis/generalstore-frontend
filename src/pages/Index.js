@@ -62,7 +62,6 @@ const handleSubmit = (event) => {
             <Link to={`/products/${product._id}`}>
             <h1>{product.name}</h1>
           </Link>
-            <span id="name"><h2>{product.name}</h2></span>
             <img src={product.image} alt="" />
             <span id="price"><h2>Price: {product.price}</h2></span>
           </div>

@@ -59,6 +59,7 @@ a:hover {
     width: 1300px;
     flex-wrap: wrap;
     justify-content:space-around;
+    align-items: center;
 
 }
 
@@ -71,7 +72,9 @@ a:hover {
     display: flex;
     justify-content:space-between;
     flex-direction:column;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    align-items: center;
+    
 }
 
 .prdct > img {
