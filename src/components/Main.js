@@ -60,6 +60,7 @@ const Main = (props) => {
         path="/products/:id"
         render={(rp) => (
           <Show
+            role={props.role}
             product={product}
             updateProduct={updateProduct}
             deleteProduct={deleteProduct}

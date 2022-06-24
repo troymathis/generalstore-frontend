@@ -78,53 +78,55 @@ const handleSubmit = (event) => {
   )};
 
   const createForm = () => {
-    return (          <form className='form' onSubmit={handleSubmit}>
-    <input
-        type="text"
-        value={newForm.name}
-        name="name"
-        placeholder="name"
-        required="required"
-        onChange={handleChange}
+    return (
+      <form className='form' onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={newForm.name}
+          name="name"
+          placeholder="name"
+          required="required"
+          onChange={handleChange}
         />
-   <input
-        type="text"
-        value={newForm.image}
-        name="image"
-        placeholder="image URL"
-        onChange={handleChange}
+        <input
+          type="text"
+          value={newForm.image}
+          name="image"
+          placeholder="image URL"
+          onChange={handleChange}
         />
-  <input 
-        type="text"
-        value={newForm.price}
-        name="price"
-        placeholder="price"
-        required="required"
-        onChange={handleChange}
+        <input 
+          type="text"
+          value={newForm.price}
+          name="price"
+          placeholder="price"
+          required="required"
+          onChange={handleChange}
         />
-  <input 
-        type="text"
-        value={newForm.description}
-        name="description"
-        placeholder="description"
-        onChange={handleChange}
+        <input 
+          type="text"
+          value={newForm.description}
+          name="description"
+          placeholder="description"
+          onChange={handleChange}
         />
-  <input 
-        type="text"
-        value={newForm.tag}
-        name="tag"
-        placeholder="tag"
-        onChange={handleChange}
+        <input 
+          type="text"
+          value={newForm.tag}
+          name="tag"
+          placeholder="tag"
+          onChange={handleChange}
         />
-  <input type="submit" value="Create Product" />
-</form>)
+        <input type="submit" value="Create Product" />
+      </form>
+    )
   }
-
+  
   return (
     <section className='products'>
-          {props.role === 'admin' ? createForm() : <></>}
-          {products ? loaded() : <h1>Loading...</h1>}
-      </section>
+      {props.role === 'admin' ? createForm() : <></>}
+      {products ? loaded() : <h1>Loading...</h1>}
+    </section>
 
   )
   
