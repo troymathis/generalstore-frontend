@@ -18,7 +18,7 @@ const createBackendUser = async ({uid, email}) => {
   });
 }
 
-const Register = () => {
+const Register = (props) => {
   const [ user, setUser ] = useState({
     email: "",
     password: "",
@@ -35,6 +35,7 @@ const Register = () => {
         })
         console.log(userCredential);
         createBackendUser(userCredential.user);
+        props.history.push("/");
       })
       .catch((error) => {
         console.log(error.code, error.message);

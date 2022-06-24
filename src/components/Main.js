@@ -71,12 +71,18 @@ const Main = (props) => {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/register">
-        <Register />
-      </Route>
+      <Route
+        path="/login"
+        render={(rp) => (
+          <Login {...rp}/>
+        )}
+      />
+      <Route 
+        path="/register"
+        render={(rp) => (
+          <Register {...rp}/>
+        )}
+      />
       <Route path="/cart">
         <Cart />
       </Route>

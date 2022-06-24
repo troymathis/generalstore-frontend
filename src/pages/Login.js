@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import { Link } from 'react-router-dom';
 
-export default function Login() {
+export default function Login(props) {
   const [ user, setUser ] = useState({
     email: "",
     password: "",
@@ -21,6 +21,7 @@ export default function Login() {
           email: "",
           password: "",
         });
+        props.history.push("/");
       })
       .catch((error) => {
         var errorMessage = error.message;
@@ -55,7 +56,7 @@ export default function Login() {
       <input type="submit" value="Login"/>
     </form>
       <Link to='/register'>Not a User? Register here</Link>
-      <div className='error'>
+      <div className='login-error'>
         {errorFB}
       </div>
     </div>
