@@ -1,5 +1,5 @@
 # GENERAL STORE
-   A web application to help customers find items they can implement to their lifestyle.
+   A web application to help customers find items they didnt even know they wanted or needed.
 
 ## GROUP PROJECT BY:
 - MAIKA LANGI
