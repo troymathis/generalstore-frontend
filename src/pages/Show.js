@@ -2,10 +2,10 @@
 import { useEffect } from "react";
 import { useState } from "react";
 function Show(props) {
-
   const [products, setProduct] = useState(null);
+  
   const id = props.match.params.id;
-
+  const cart = props.cart || []
 
   const refreshData = async () => {
     const URL = "https://project3-be.herokuapp.com/products/"
@@ -26,6 +26,10 @@ function Show(props) {
   useEffect(() => {getProduct()}, []);
   const [ editForm, setEditForm ] = useState(products);
 
+  const addToCart = () => {
+    cart.push(id)
+    console.log(cart)
+  }
 
   // handleChange function for form
   const handleChange = event => {
@@ -103,7 +107,7 @@ function Show(props) {
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
       <h2> ${products?.price} </h2>
-      {console.log(props.role)}
+      <div onClick={addToCart}>ADD TO CART</div>
       {props.role === 'admin' ? createForm() : <></>}
     </div>
   )

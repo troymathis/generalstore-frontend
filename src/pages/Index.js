@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 function Product(props) {
   // create state to hold product data
   const [products, setProduct] = useState(null);
-
   const URL = "https://project3-be.herokuapp.com/products/"
-
-  
 
   const [newForm,setNewForm] = useState({
     name:"",
@@ -36,7 +33,6 @@ const handleSubmit = (event) => {
 
   //create function to make api call
   const getProductData = async () => {
-    console.log(props.role)
     // make api call and get response
     const response = await fetch(URL);
     // turn response into javascript object
@@ -44,7 +40,7 @@ const handleSubmit = (event) => {
     // set the state to the data
     setProduct(data);
   };
-  
+
   const createProduct = async product => {
     // make post request to create people
     await fetch(URL, {
