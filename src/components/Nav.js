@@ -31,12 +31,12 @@ const Header = (props) => {
                     </Link>
 
                   </li>
-                  <li onClick={logout}>Logout</li>
+                  <li onClick={logout}>LOGOUT</li>
                 </>
               )
             : 
             <Link to='/login'>
-              <li> Login </li> 
+              <li> LOGIN </li> 
             </Link>
               
           }
