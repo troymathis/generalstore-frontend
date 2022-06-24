@@ -10,7 +10,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 
-const Main = () => {
+const Main = (props) => {
   const [product, setProduct] = useState(null);
 
   const URL = "https://project3-be.herokuapp.com/products/";
@@ -44,6 +44,7 @@ const Main = () => {
   };
 
   useEffect(() => {getProduct()}, []);
+
   return (
     <main>
       <Route exact path="/">
@@ -51,7 +52,7 @@ const Main = () => {
       </Route>
       <div>
         <Route exact path="/products">
-          <Index />
+          <Index role={props.role}/>
         </Route>
       </div>
       <Route

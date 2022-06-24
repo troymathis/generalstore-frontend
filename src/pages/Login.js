@@ -17,14 +17,12 @@ export default function Login() {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(user.email, user.password)
       .then((userCredential) => {
-        var loginUser = userCredential.user
         setUser({
           email: "",
           password: "",
         });
       })
       .catch((error) => {
-        var errorCode = error.code;
         var errorMessage = error.message;
         setErrorFB(errorMessage);
         setUser({
