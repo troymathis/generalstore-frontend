@@ -21,6 +21,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 20px;
+    a:hover {
+        opacity: 50%;
+    }
+}
+
+.Home {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h4 {
+        color: gray;
+    }
 }
 
 .Home {
@@ -42,27 +57,48 @@ h1 {
 li {
     list-style: none;
     cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    transition: background-color 3s linear;
 }
 li:hover {
-    opacity: 50%;
+    background-color: white;
+    color: black;
 }
 
 a {
     text-decoration: none;
 }
 
-a:hover {
-    opacity: 50%;
+
+
+input {
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
 }
 
 .nav {
     display:flex;
+    margin: auto;
     justify-content: space-around;
     align-items: center;
     border:3px solid gray;
     padding:8px;
     width: 90%;
     border-radius: 30px;
+    div {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: transparent;
+        transition: background-color 3s linear;
+    }
+    div:hover {
+        background-color: white;
+        color: black;
+    }
 }
 
 
@@ -71,10 +107,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
-
-
     align-items: center;
     justify-content: center;
     max-height: 500px;
@@ -98,6 +130,9 @@ a:hover {
     border-radius: px;
     padding: 5px;
     max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 300px;
     margin-bottom: 10px;
     display: flex;
     justify-content:space-between;
@@ -114,6 +149,15 @@ a:hover {
     max-width: 100px;
 }
 
+.person_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+        max-width: 200px;
+    }
+}
 .product {
     display: flex;
     flex-direction: column;
