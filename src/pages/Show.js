@@ -26,47 +26,51 @@ function Show(props) {
   }
 
   const createForm = () => {
-    return (<><button id="delete" onClick={removeProduct}>
-    DELETE
-  </button>
-  <form onSubmit={handleSubmit}>
-    <input
-      type="text"
-      value={editForm?.name}
-      name="name"
-      placeholder="name"
-      onChange={handleChange}
-    />
-    <input
-      type="text"
-      value={editForm?.image}
-      name="image"
-      placeholder="image URL"
-      onChange={handleChange}
-    />
-    <input
-      type="text"
-      value={editForm?.price}
-      name="price"
-      placeholder="title"
-      onChange={handleChange}
-    />
-    <input
-      type="text"
-      value={editForm?.description}
-      name="description"
-      placeholder="description"
-      onChange={handleChange}
-    />
-    <input 
-      type="text"
-      value={editForm?.tag}
-      name="tag"
-      placeholder="tag"
-      onChange={handleChange}
-    />
-    <input type="submit" value="Update Product" />
-  </form></>)
+    return (
+      <>
+        <button id="delete" onClick={removeProduct}>
+          DELETE
+        </button>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={editForm?.name}
+            name="name"
+            placeholder="name"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            value={editForm?.image}
+            name="image"
+            placeholder="image URL"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            value={editForm?.price}
+            name="price"
+            placeholder="title"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            value={editForm?.description}
+            name="description"
+            placeholder="description"
+            onChange={handleChange}
+          />
+          <input 
+            type="text"
+            value={editForm?.tag}
+            name="tag"
+            placeholder="tag"
+            onChange={handleChange}
+          />
+          <input type="submit" value="Update Product" />
+        </form>
+      </>
+    )
   }
 
  useEffect(() => {
@@ -80,6 +84,7 @@ function Show(props) {
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
       <h2> ${products?.price} </h2>
+      {console.log(props.role)}
       {props.role === 'admin' ? createForm() : <></>}
     </div>
   )

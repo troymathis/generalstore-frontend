@@ -13,6 +13,9 @@ const Header = (props) => {
         <Link to='/products'>
           <div>PRODUCTS</div>
         </Link>
+        <Link to='/cart'>
+          <div>CART</div>
+        </Link>
         <ul>
           {
             props.user 
@@ -28,12 +31,12 @@ const Header = (props) => {
                     </Link>
 
                   </li>
-                  <li onClick={logout}>Logout</li>
+                  <li onClick={logout}>LOGOUT</li>
                 </>
               )
             : 
             <Link to='/login'>
-              <li> Login </li> 
+              <li> LOGIN </li> 
             </Link>
               
           }

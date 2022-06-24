@@ -9,6 +9,7 @@ import About from "../pages/About";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Cart from "../pages/Cart";
 
 const Main = (props) => {
   const [product, setProduct] = useState(null);
@@ -59,6 +60,7 @@ const Main = (props) => {
         path="/products/:id"
         render={(rp) => (
           <Show
+            role={props.role}
             product={product}
             updateProduct={updateProduct}
             deleteProduct={deleteProduct}
@@ -74,6 +76,9 @@ const Main = (props) => {
       </Route>
       <Route path="/register">
         <Register />
+      </Route>
+      <Route path="/cart">
+        <Cart />
       </Route>
     </main>
   );
