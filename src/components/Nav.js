@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
 import { logout } from '../services/firebase';
+import { useLocation } from 'react-router-dom';
 
+{/* <li onClick={logout}>LOGOUT</li> */}
 const Header = (props) => {
+  const location = useLocation();
+  const handleLogout = () => {
+    logout();
+    props.history.push('/');
+  }
+  console.log(location.pathname);  
   return (
       <nav className='nav'>
         <Link to='/'>
@@ -17,28 +25,18 @@ const Header = (props) => {
           <div>CART</div>
         </Link>
         <ul>
-          {
-            props.user 
+        {
+          location.pathname === "/account" && props.user
+          ? <div onClick={handleLogout}>LOGOUT</div> 
+          : !(location.pathname === "/account") && props.user
             ? 
-              (
-                <>
-                  <li className='greeting-list-item'>Welcome, {props.user.displayName} 
-                    <Link to='/account'>
-                      <img
-                        src={props.user.photoURL} 
-                        alt={props.user.displayName}
-                      />
-                    </Link>
-
-                  </li>
-                  <li onClick={logout}>LOGOUT</li>
-                </>
-              )
-            : 
-            <Link to='/login'>
-              <li> LOGIN </li> 
-            </Link>
-              
+              <Link to='/account'>
+                YOUR ACCOUNT
+              </Link> 
+            :
+              <Link to='/login'>
+                <li> LOGIN </li> 
+              </Link> 
           }
         </ul>
       </nav>

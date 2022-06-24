@@ -10,6 +10,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Cart from "../pages/Cart";
+import Account from "../pages/Account";
 
 const Main = (props) => {
   const [product, setProduct] = useState(null);
@@ -85,6 +86,9 @@ const Main = (props) => {
       />
       <Route path="/cart">
         <Cart />
+      </Route>
+      <Route>
+        <Account/>
       </Route>
     </main>
   );
