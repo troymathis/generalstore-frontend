@@ -13,6 +13,9 @@ const Header = (props) => {
         <Link to='/products'>
           <div>PRODUCTS</div>
         </Link>
+        <Link to='/cart'>
+          <div>CART</div>
+        </Link>
         <ul>
           {
             props.user 
