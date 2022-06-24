@@ -13,11 +13,8 @@ function App() {
   const getRole = async (uid) => {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data)
     const currentUser = data.find(u => u.UID === uid )
-    console.log(currentUser)
     setRole(currentUser.role)
-    console.log(role)
   };
 
   useEffect (() => {
@@ -30,7 +27,6 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged(user => {      
       setUser(user)
-      console.log(user.uid)
       getRole(user.uid)
     }) 
   }, []);
