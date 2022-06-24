@@ -2,11 +2,30 @@
 import { useEffect } from "react";
 import { useState } from "react";
 function Show(props) {
-  const id = props.match.params.id;
-  const product = props.product;
-  const products = product?.find(p => p._id === id);
 
+  const [products, setProduct] = useState(null);
+  const id = props.match.params.id;
+
+
+  const refreshData = async () => {
+    const URL = "https://project3-be.herokuapp.com/products/"
+    // make api call and get response
+    const response = await fetch(URL);
+    // turn response into javascript object
+    const data = await response.json();
+    // set the state to the data
+    return(data)
+  };
+
+  const getProduct = async () => {
+    let data = await refreshData();
+    console.log(data.find(p => p._id === id))
+    setProduct(data.find(p => p._id === id))
+  }
+
+  useEffect(() => {getProduct()}, []);
   const [ editForm, setEditForm ] = useState(products);
+
 
   // handleChange function for form
   const handleChange = event => {
