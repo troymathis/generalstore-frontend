@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { logout } from '../services/firebase';
 import { useLocation } from 'react-router-dom';
 
-{/* <li onClick={logout}>LOGOUT</li> */}
 const Header = (props) => {
   const location = useLocation();
   const handleLogout = () => {
