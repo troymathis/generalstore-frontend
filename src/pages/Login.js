@@ -52,7 +52,7 @@ export default function Login() {
         value={user.password}
         onChange={handleChange}/>
       
-      <input type="submit" value="submit"/>
+      <input type="submit" value="Login"/>
     </form>
       <Link to='/register'>Not a User? Register here</Link>
       <div className='error'>
