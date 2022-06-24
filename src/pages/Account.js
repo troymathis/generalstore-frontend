@@ -13,7 +13,6 @@ const Account = (props) => {
         let data = await refreshData();
         setUser(data.find(p => p._id === props.match.params.UID))
       }
-    console.log(props.user)
     
     useEffect(() => {getUser()}, []);
 

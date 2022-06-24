@@ -86,7 +86,6 @@ form {
 input {
     background-color: transparent;
     border: 0px solid;
-    border-bottom: 1px solid;
     color: white;
     border-radius: 5px;
     padding: 3px;
@@ -189,4 +188,8 @@ input:focus {
     img {
         max-width: 500px;
     }
+}
+
+.Submit {
+    cursor: pointer;
 }
