@@ -19,7 +19,6 @@ function Show(props) {
 
   const getProduct = async () => {
     let data = await refreshData();
-    console.log(data.find(p => p._id === id))
     setProduct(data.find(p => p._id === id))
   }
 
@@ -103,7 +102,6 @@ function Show(props) {
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
       <h2> ${products?.price} </h2>
-      {console.log(props.role)}
       {props.role === 'admin' ? createForm() : <></>}
     </div>
   )
