@@ -76,7 +76,7 @@ const Register = () => {
         name="lastName" 
         placeholder='Last Name'
         onChange={handleChange}/>
-      <input type="submit" value="submit"/>
+      <input type="submit" value="Register"/>
     </form>
     <Link to="/login">Already a user? Login here</Link>
     </div>

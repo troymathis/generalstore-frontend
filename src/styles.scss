@@ -53,6 +53,10 @@ h1 {
     display: flex;
     justify-content: center;
 }
+#feat {
+    font-size: xx-large;
+    font-family: 'Ultra', serif;
+}
 
 li {
     list-style: none;
@@ -60,7 +64,7 @@ li {
     border-radius: 5px;
     padding: 10px;
     background-color: transparent;
-    transition: background-color 3s linear;
+    transition: background-color s linear;
 }
 li:hover {
     background-color: white;
@@ -71,17 +75,31 @@ a {
     text-decoration: none;
 }
 
-
+form {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 input {
+    background-color: transparent;
+    border: 0px solid;
+    border-bottom: 1px solid;
+    color: white;
     border-radius: 5px;
     padding: 3px;
     margin-right: 3px;
     margin-bottom: 3px;
+    padding: 5px;
+}
+input:focus {
+    outline: none;
 }
 
 .nav {
-    display:flex;
+    display: flex;
     margin: auto;
     justify-content: space-around;
     align-items: center;
@@ -100,7 +118,12 @@ input {
         color: black;
     }
 }
-
+#featured {
+    display: flex;
+    div {
+        margin-right: 10px;
+    }
+}
 
 .products {
     margin: 30px auto;
@@ -127,7 +150,7 @@ input {
     position: relative;
     top: 0;
     transition: top ease 0.5s;
-    border-radius: px;
+    border-radius: 3px;
     padding: 5px;
     max-width: 300px;
     min-width: 300px;
