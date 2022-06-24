@@ -9,6 +9,10 @@ const formatData = () => {
         <img src={person.headshot} alt="img" />
         <p> {person.bio}</p>
         <p>{person.email}</p>
+        <span id='links'>
+        <a href={person.linkedin}><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="50px"/></a>
+        <a href={person.github}><img src="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png" width="50px"/></a>
+        </span>
       </div>
     );
   });

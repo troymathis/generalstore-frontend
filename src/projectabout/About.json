@@ -4,24 +4,32 @@
         "name": "MATTHEW PERO",
         "email": "mattpero22@gmail.com",
         "headshot": "https://i.imgur.com/BK7YNCg.png",
-        "bio": "Hi! As an emerging software engineer who is a creative problem solver and critical thinker, I like to challenge myself with my projects and take pride in a job well done"
+        "bio": "Hi! As an emerging software engineer who is a creative problem solver and critical thinker, I like to challenge myself with my projects and take pride in a job well done",
+        "linkedin": "https://www.linkedin.com/in/matthew-pero22/",
+        "github": "https://github.com/mattpero22"
       },
       {
         "name": "MAIKA LANGI",
         "email": "maikalangi@gmail.com",
         "headshot": "https://i.imgur.com/TBya5D1.png",
-        "bio": "Hi! My name is Maika and I'm a software engineer currently enrolled at General Assembly. I've always had a curiosity for software development, especially in backend functionality and have made the leap into tech. Looking to create connections and continue to dive into the tech space while getting involved with the culture and bringing forward new ideas!"
+        "bio": "Hi! My name is Maika and I'm a software engineer currently enrolled at General Assembly. I've always had a curiosity for software development, especially in backend functionality and have made the leap into tech. Looking to create connections and continue to dive into the tech space while getting involved with the culture and bringing forward new ideas!",
+        "linkedin": "https://www.linkedin.com/in/maika-langi/",
+        "github": "https://github.com/maikalangi"
       },
       {
         "name": "TROY MATHIS",
         "email": "troy.mathis00@gmail.com",
         "headshot": "https://i.imgur.com/MoYg9DJ.png",
-        "bio": "Software Engineering/ Web Development fellow at General Assembly. In a constant state of learning and sharing what I learn with my peers. Really enjoy group efforts and bringing new ideas to the table. Open to every opportunity with a focus on the music and entertainment industry."
+        "bio": "Software Engineering/ Web Development fellow at General Assembly. In a constant state of learning and sharing what I learn with my peers. Really enjoy group efforts and bringing new ideas to the table. Open to every opportunity with a focus on the music and entertainment industry.",
+        "linkedin": "https://www.linkedin.com/in/troy-mathis-8ab101237/",
+        "github": "https://github.com/troymathis"
       },
       {
         "name": "JQUAN COLLINS",
         "email": "jquancollins96@gmail.com",
         "headshot": "https://i.imgur.com/IkeaxJ2.png",
-        "bio": "Hello Im JQUAN COLLINS. I am a Software Engineer. Im skilled in languages such as Javascript, Css, Html, Python and React. Before becoming an Engineer I served my family Landscape Design business for 5+ years.I encountered sales, customer service and a great deal of problem solving. While serving the business I engaged in network marketing to enhance my communication and interpersonal skills. I love these skills because it made me who I am today which is a Full Stack Developer! The challenges of a software engineer brings me great joy!"
+        "bio": "Hello Im JQUAN COLLINS. I am a Software Engineer. Im skilled in languages such as Javascript, Css, Html, Python and React. Before becoming an Engineer I served my family Landscape Design business for 5+ years.I encountered sales, customer service and a great deal of problem solving. While serving the business I engaged in network marketing to enhance my communication and interpersonal skills. I love these skills because it made me who I am today which is a Full Stack Developer! The challenges of a software engineer brings me great joy!",
+        "linkedin": "https://www.linkedin.com/in/jquancollins/",
+        "github": "https://github.com/jquan114"
       }
 ]
