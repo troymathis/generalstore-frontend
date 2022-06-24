@@ -36,6 +36,7 @@ const handleSubmit = (event) => {
 
   //create function to make api call
   const getProductData = async () => {
+    console.log(props.role)
     // make api call and get response
     const response = await fetch(URL);
     // turn response into javascript object
@@ -57,7 +58,7 @@ const handleSubmit = (event) => {
   }
 
   // make initial call for the data inside a useEffect, so it only happens once one component load
-  useEffect(() => {getProductData()}, [products]);
+  useEffect(() => {getProductData()}, []);
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
@@ -75,46 +76,51 @@ const handleSubmit = (event) => {
       }
     )
   )};
+
+  const createForm = () => {
+    return (          <form className='form' onSubmit={handleSubmit}>
+    <input
+        type="text"
+        value={newForm.name}
+        name="name"
+        placeholder="name"
+        onChange={handleChange}
+        />
+   <input
+        type="text"
+        value={newForm.image}
+        name="image"
+        placeholder="image URL"
+        onChange={handleChange}
+        />
+  <input 
+        type="text"
+        value={newForm.price}
+        name="price"
+        placeholder="price"
+        onChange={handleChange}
+        />
+  <input 
+        type="text"
+        value={newForm.description}
+        name="description"
+        placeholder="description"
+        onChange={handleChange}
+        />
+  <input 
+        type="text"
+        value={newForm.tag}
+        name="tag"
+        placeholder="tag"
+        onChange={handleChange}
+        />
+  <input type="submit" value="Create Product" />
+</form>)
+  }
+
   return (
     <section className='products'>
-          <form className='form' onSubmit={handleSubmit}>
-              <input
-                  type="text"
-                  value={newForm.name}
-                  name="name"
-                  placeholder="name"
-                  onChange={handleChange}
-                  />
-             <input
-                  type="text"
-                  value={newForm.image}
-                  name="image"
-                  placeholder="image URL"
-                  onChange={handleChange}
-                  />
-            <input 
-                  type="text"
-                  value={newForm.price}
-                  name="price"
-                  placeholder="price"
-                  onChange={handleChange}
-                  />
-            <input 
-                  type="text"
-                  value={newForm.description}
-                  name="description"
-                  placeholder="description"
-                  onChange={handleChange}
-                  />
-            <input 
-                  type="text"
-                  value={newForm.tag}
-                  name="tag"
-                  placeholder="tag"
-                  onChange={handleChange}
-                  />
-            <input type="submit" value="Create Product" />
-          </form>
+          {props.role === 'admin' ? createForm() : <></>}
           {products ? loaded() : <h1>Loading...</h1>}
       </section>
 
