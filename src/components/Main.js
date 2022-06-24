@@ -14,18 +14,26 @@ import Account from "../pages/Account";
 
 const Main = (props) => {
   const [product, setProduct] = useState(null);
+  const [user, setUser] = useState(null);
 
-  const URL = "https://project3-be.herokuapp.com/products/";
+  const productsUrl = "https://project3-be.herokuapp.com/products/";
+  const usersUrl = "https://project3-be.herokuapp.com/users/";
 
   const getProduct = async () => {
-    const response = await fetch(URL);
+    const response = await fetch(productsUrl);
     const data = await response.json();
     setProduct(data);
   };
 
+  const getUser = async () => {
+    const response = await fetch(usersUrl);
+    const data = await response.json();
+    setUser(data);
+  };
+
   const updateProduct = async (product, id) => {
     // make put request to create product
-    await fetch(URL + id, {
+    await fetch(productsUrl + id, {
       method: "PUT",
       headers: {
         "Content-Type": "Application/json",
@@ -36,16 +44,35 @@ const Main = (props) => {
     getProduct();
   };
 
+  const updateUser = async (user, id) => {
+    await fetch(usersUrl + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    getUser();
+  };
+
   const deleteProduct = async (id) => {
     // make delete request to create people
-    await fetch(URL + id, {
+    await fetch(productsUrl + id, {
       method: "DELETE",
     });
     // update list of product
     getProduct();
   };
+  
+  const deleteUser = async (id) => {
+    await fetch(usersUrl + id, {
+      method: "DELETE",
+    });
+    getUser();
+  };
 
   useEffect(() => {getProduct()}, []);
+  useEffect(() => {getUser()}, []);
 
   return (
     <main>
@@ -87,9 +114,17 @@ const Main = (props) => {
       <Route path="/cart">
         <Cart />
       </Route>
-      <Route>
-        <Account/>
-      </Route>
+      <Route
+        path="/Account"
+        render={(rp)=>(
+          <Account 
+            {...rp}
+            user={user}
+            updateUser={updateUser}
+            deleteUser={deleteUser} 
+          />
+        )}
+      />
     </main>
   );
 };

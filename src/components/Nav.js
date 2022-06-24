@@ -9,7 +9,6 @@ const Header = (props) => {
     logout();
     props.history.push('/');
   }
-  console.log(location.pathname);  
   return (
       <nav className='nav'>
         <Link to='/'>
