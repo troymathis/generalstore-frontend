@@ -27,8 +27,11 @@
 
 ![Website Image](https://i.imgur.com/sEEA3ab.png)
 
-
-
-
 ## Future Enhancements 
-In the future this site will be developed to where users can see multiple books at one time. Also I want to add a feature where users can see the nearest book store to pick up the book they searched.
+-Have the cart for each user update the backend items in database
+-Have the cart create an order object when submitted
+-Provide admin users the capability to view and edit users on the site
+-Provide users the capability to add custom item listings
+-Allow users to rate and review items
+-Allow admin to view and edit the status of orders
+
