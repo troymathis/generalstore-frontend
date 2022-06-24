@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
- import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Product(props) {
   // create state to hold product data
@@ -84,6 +84,7 @@ const handleSubmit = (event) => {
         value={newForm.name}
         name="name"
         placeholder="name"
+        required="required"
         onChange={handleChange}
         />
    <input
@@ -98,6 +99,7 @@ const handleSubmit = (event) => {
         value={newForm.price}
         name="price"
         placeholder="price"
+        required="required"
         onChange={handleChange}
         />
   <input 
