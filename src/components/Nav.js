@@ -5,6 +5,10 @@ import { useLocation } from 'react-router-dom';
 {/* <li onClick={logout}>LOGOUT</li> */}
 const Header = (props) => {
   const location = useLocation();
+  const handleLogout = () => {
+    logout();
+    props.history.push('/');
+  }
   console.log(location.pathname);  
   return (
       <nav className='nav'>
@@ -22,17 +26,17 @@ const Header = (props) => {
         </Link>
         <ul>
         {
-          location.pathname === "/account" 
-          ? <div onClick={logout}>LOGOUT</div> 
-          : props.user && ! (location.pathname === "/account")
+          location.pathname === "/account" && props.user
+          ? <div onClick={handleLogout}>LOGOUT</div> 
+          : !(location.pathname === "/account") && props.user
             ? 
               <Link to='/account'>
                 YOUR ACCOUNT
-              </Link>    
-            : 
+              </Link> 
+            :
               <Link to='/login'>
                 <li> LOGIN </li> 
-              </Link>
+              </Link> 
           }
         </ul>
       </nav>

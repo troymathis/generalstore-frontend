@@ -39,8 +39,8 @@ function App() {
   return (
     <div className="App">
       <h1 id="header">General Store</h1>
-      <Nav user={user} Sidebar={Sidebar} />
-      <Main user={user} role={role}/>
+      <Nav user={user} />
+      <Main user={user} role={role} />
     </div>
   );
 }
