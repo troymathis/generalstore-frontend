@@ -51,7 +51,7 @@ export default function Login(props) {
         value={user.password}
         onChange={handleChange}/>
       
-      <input type="submit" value="Login"/>
+      <input className='Submit' type="submit" value="Login"/>
     </form>
       <Link to='/register'>Not a User? Register here</Link>
       <div className='login-error'>

@@ -106,10 +106,7 @@ function Show(props) {
       <h1>{products?.name}</h1>
       <img src={products?.image} alt={products?.name} />
       <h2> ${products?.price} </h2>
-//<<<<<<< account
-//=======
       <div onClick={addToCart}>ADD TO CART</div>
-//>>>>>>> main
       {props.role === 'admin' ? createForm() : <></>}
     </div>
   )

@@ -77,7 +77,7 @@ const Register = (props) => {
         name="lastName" 
         placeholder='Last Name'
         onChange={handleChange}/>
-      <input type="submit" value="Register"/>
+      <input className='Submit' type="submit" value="Register"/>
     </form>
     <Link to="/login">Already a user? Login here</Link>
     </div>

@@ -113,7 +113,7 @@ const handleSubmit = (event) => {
         placeholder="tag"
         onChange={handleChange}
         />
-  <input type="submit" value="Create Product" />
+  <input className='Submit' type="submit" value="Create Product" />
 </form>)
   }
 
