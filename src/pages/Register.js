@@ -3,7 +3,10 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import { Link } from 'react-router-dom';
 
+//<<<<<<< login-response
+//=======
 const URL = "https://project3-be.herokuapp.com/users/"
+//>>>>>>> main
 
 const createBackendUser = async ({uid, email}) => {
   console.log(uid, email)
