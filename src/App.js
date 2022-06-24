@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <h1 id="header">General Store</h1>
       <Nav user={user} />
-      <Main user={user} role={role} />
+      <Main user={user} role={role} getRole={getRole}/>
     </div>
   );
 }

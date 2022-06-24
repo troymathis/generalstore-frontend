@@ -11,8 +11,6 @@ export default function Login(props) {
 
   const [errorFB, setErrorFB] = useState(null);
 
-
-
   const handleSubmit = (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(user.email, user.password)
