@@ -10,6 +10,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Cart from "../pages/Cart";
+import Account from "../pages/Account";
 
 const Main = (props) => {
   const [product, setProduct] = useState(null);
@@ -71,14 +72,23 @@ const Main = (props) => {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/register">
-        <Register />
-      </Route>
+      <Route
+        path="/login"
+        render={(rp) => (
+          <Login {...rp}/>
+        )}
+      />
+      <Route 
+        path="/register"
+        render={(rp) => (
+          <Register {...rp}/>
+        )}
+      />
       <Route path="/cart">
         <Cart />
+      </Route>
+      <Route>
+        <Account/>
       </Route>
     </main>
   );

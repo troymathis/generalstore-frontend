@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { auth } from './services/firebase';
 import Nav from './components/Nav';
 import Main from './components/Main';
+import Sidebar from './components/Sidebar';
 import "./styles.scss";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
     <div className="App">
       <h1 id="header">General Store</h1>
       <Nav user={user} />
-      <Main user={user} role={role}/>
+      <Main user={user} role={role} />
     </div>
   );
 }
